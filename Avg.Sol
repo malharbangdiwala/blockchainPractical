@@ -1,0 +1,24 @@
+//Malhar Bangdiwala
+// SPDX-License-Identifier: GPL-3.0
+
+pragma solidity ^0.8.0;
+
+contract Avg {
+    uint [] balance=[565,19,27,28,400,5700,3900,854,4789,2,5,78,18,142];
+
+    function getSum() public view returns(uint){
+        uint sum = 0;
+        for(uint i = 0; i < balance.length; i++){
+            sum = sum + balance[i];
+        }
+        return sum;
+    }
+
+    function getLength() public view returns (uint){
+        return balance.length;
+    }
+    
+    function getAvg() public view returns(uint){
+        return getSum()/getLength();
+    }
+}
